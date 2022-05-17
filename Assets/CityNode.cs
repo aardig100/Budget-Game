@@ -44,7 +44,7 @@ public class CityNode : MonoBehaviour
             totalFunding += 1;
             
             if(totalFunding % 100 == 0)
-                quality++;
+                quality+= totalFunding;
         }
         
     }
