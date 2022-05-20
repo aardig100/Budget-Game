@@ -35,17 +35,6 @@ public class CityNode : MonoBehaviour
         tex1.text = "Building: " + name;
         tex2.text = "Quality: " + quality;
         tex3.text = "Funding: " + totalFunding;
-
-        
-        i++;
-
-        if(i%60 == 0)
-        {
-            totalFunding += 1;
-            
-            if(totalFunding % 100 == 0)
-                quality+= totalFunding;
-        }
         
     }
 
