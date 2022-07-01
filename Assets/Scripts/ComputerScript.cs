@@ -16,15 +16,14 @@ public class ComputerScript : MonoBehaviour
     [SerializeField] private TextMeshProUGUI fundText = null;
 
     private double totalfunds;
-    public double current;
-    public double predicted;
+
 
     public GameObject menu;
 
 
     void Start()
     {
-        totalfunds = current + predicted;
+        totalfunds = GlobalVars.currentFunds + GlobalVars.predictedFunds;
         fundSlider.minValue = 0;
         libSlider.minValue = 0;
         gymSlider.minValue = 0;
@@ -82,6 +81,11 @@ public class ComputerScript : MonoBehaviour
         menu.SetActive(!menu.activeSelf);
     }
 
+    public void setBudget()
+    {
+        GlobalVars.LibFunds = libSlider.value;
+        GlobalVars.GymFunds = gymSlider.value;
+    }
 
     private void Update()
     {

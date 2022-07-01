@@ -10,10 +10,9 @@ public class OfficeScripts : MonoBehaviour
     public string cityScene;
     public GameObject bugetScreen;
     public GameObject computerScreen;
-    public TextMeshProUGUI currentFunds;
-    public TextMeshProUGUI predictedFunds;
-    public double current;
-    public double predicted;
+    public TextMeshProUGUI currentFundsGUI;
+    public TextMeshProUGUI predictedFundsGUI;
+
 
     public void Door()
     {
@@ -42,8 +41,8 @@ public class OfficeScripts : MonoBehaviour
 
     private void Update()
     {
-        currentFunds.text = "$" + current;
-        predictedFunds.text = "$" + predicted;
+        currentFundsGUI.text = "$" + GlobalVars.currentFunds;
+        predictedFundsGUI.text = "$" + GlobalVars.predictedFunds;
 
     }
 

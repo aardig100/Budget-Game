@@ -34,8 +34,11 @@ public class CityNode : MonoBehaviour
     {
         tex1.text = "Building: " + name;
         tex2.text = "Quality: " + quality;
-        tex3.text = "Funding: " + totalFunding;
-        
+        if(name == "Gym")
+            tex3.SetText(string.Format("Funding: {0:.00}", GlobalVars.GymFunds));
+        else
+            tex3.SetText(string.Format("Funding: {0:.00}", GlobalVars.LibFunds));
+
     }
 
 }
